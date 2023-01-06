@@ -74,4 +74,14 @@ body h1 {
     border-radius: 50%;
     background: linear-gradient(red, purple, blue);
     margin-bottom: 1rem;
+    
+}
+
+@keyframes rotate {
+    from{
+        transform:translateX(0vh);
+    }
+    to {
+        transform:translateX(+15vh) rotate(+180deg);
+    }
 }
