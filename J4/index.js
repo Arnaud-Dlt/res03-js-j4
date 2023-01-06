@@ -34,8 +34,11 @@ function exercice3()
         for(let i=0;i<ingredients.length;i++)
         {
             let li = document.createElement("li");
+            let txt=document.createTextNode(ingredients[i]);
             ul.appendChild(li);
-            li.innerHTML=ingredients[i];
+            li.appendChild(txt);
+            
+            
         }
     })
 }
@@ -56,11 +59,42 @@ function exercice4()
             secret: "Iron Man"
         }
     ];
+    
+    let btn=document.getElementById("btn-add-hero")
+    let tbody=document.querySelector("tbody");
+    
+    let count=0;
+    btn.addEventListener("click", function(event)
+    {
+        let tr=document.createElement("tr");
+        let tdName=document.createElement("td");
+        let tdSecret=document.createElement("td");
+        let name=document.createTextNode(heroes[count].name);
+        let secret=document.createTextNode(heroes[count].secret);
+                
+        tbody.appendChild(tr);
+        tr.appendChild(tdName);
+        tr.appendChild(tdSecret);
+        tdName.appendChild(name);
+        tdSecret.appendChild(secret);
+        count++;
+    })
 }
 
 function exercice5()
 {
-
+    let btn=document.getElementById("btn-turn");
+    
+    btn.addEventListener("click", function()
+    {
+        let blue=document.getElementById("blue");
+        let red=document.getElementById("red");
+        let green=document.getElementById("green");
+        
+        blue.style.backgroundColor="red";
+        red.style.backgroundColor="green";
+        green.style.backgroundColor="blue";
+    })
 }
 
 function exercice6()
