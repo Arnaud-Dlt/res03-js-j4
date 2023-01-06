@@ -73,8 +73,7 @@ body h1 {
     height:8vh;
     border-radius: 50%;
     background: linear-gradient(red, purple, blue);
-    margin-bottom: 1rem;
-    
+    margin-bottom: 1rem;   
 }
 
 @keyframes rotate {
@@ -84,4 +83,9 @@ body h1 {
     to {
         transform:translateX(+15vh) rotate(+180deg);
     }
+}
+
+.rotate {
+    animation-duration:5s;
+    animation-name:rotate;
 }

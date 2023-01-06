@@ -99,7 +99,13 @@ function exercice5()
 
 function exercice6()
 {
-
+    let btn=document.getElementById("btn-roll");
+    let ball=document.getElementById("ball");
+    
+    btn.addEventListener("click", function(event)
+    {
+        ball.classList.add("rotate");
+    })
 }
 
 window.addEventListener("DOMContentLoaded", function(){
